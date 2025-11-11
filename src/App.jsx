@@ -58,7 +58,7 @@ export default function App() {
             <a href="#contact" className="hover:text-slate-900">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
-            <a href="mailto:" className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white text-sm px-4 py-2 hover:bg-slate-800 transition-colors">
+            <a href="mailto:riyaubriani26@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white text-sm px-4 py-2 hover:bg-slate-800 transition-colors">
               <Mail size={16} /> Email
             </a>
           </div>
@@ -253,13 +253,13 @@ export default function App() {
           <p className="mt-3 text-slate-600">Open to full-time roles, freelance projects, or collaborations.</p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href="mailto:" className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-medium hover:bg-slate-800">
+            <a href="mailto:riyaubriani26@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-medium hover:bg-slate-800">
               <Mail size={18} /> Book a Call
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-6 py-3 text-sm font-medium border border-white text-slate-700 hover:bg-white">
+            <a href="https://www.linkedin.com/in/riya-ubriani-/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-6 py-3 text-sm font-medium border border-white text-slate-700 hover:bg-white">
               <Linkedin size={18} /> LinkedIn
             </a>
-            <a href="https://wa.me/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-6 py-3 text-sm font-medium border border-white text-slate-700 hover:bg-white">
+            <a href="https://wa.me/917020434669" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-6 py-3 text-sm font-medium border border-white text-slate-700 hover:bg-white">
               <Phone size={18} /> WhatsApp
             </a>
           </div>

@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { BarChart3, Search, Megaphone, LineChart, Users, Globe, FileDown, ArrowRight, Linkedin, Mail, Phone } from 'lucide-react'
 
 function GlassBadge({ icon: Icon, label }) {
@@ -38,8 +38,9 @@ export default function App() {
     []
   )
 
-  // Google Drive direct view URL constructed from provided link
+  // Google Drive direct-view URL from your link. Requires the file to be shared as "Anyone with the link - Viewer".
   const profilePhotoUrl = 'https://drive.google.com/uc?export=view&id=1S7tC0BV6gElDQtX65k1Ek8eCmR7TB65r'
+  const [photoError, setPhotoError] = useState(false)
 
   return (
     <div className="min-h-screen bg-white text-slate-800" style={gradientBg}>
@@ -113,15 +114,22 @@ export default function App() {
               <div className="absolute bottom-8 right-10 h-28 w-28 rounded-full bg-gradient-to-br from-purple-200/60 to-teal-200/60 blur-xl" />
             </div>
 
-            {/* Profile photo */}
+            {/* Profile photo (with graceful fallback) */}
             <div className="absolute right-10 top-20">
               <div className="h-40 w-40 sm:h-56 sm:w-56 rounded-full p-1 bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-                <img
-                  src={profilePhotoUrl}
-                  alt="Riya Ubriani profile photo"
-                  className="h-full w-full rounded-full object-cover object-center border border-white/70 shadow-inner"
-                  loading="eager"
-                />
+                {photoError ? (
+                  <div className="h-full w-full rounded-full bg-gradient-to-br from-indigo-200 via-teal-200 to-purple-200 flex items-center justify-center border border-white/70 shadow-inner">
+                    <span className="text-slate-800 text-3xl font-semibold">RU</span>
+                  </div>
+                ) : (
+                  <img
+                    src={profilePhotoUrl}
+                    alt="Riya Ubriani profile photo"
+                    className="h-full w-full rounded-full object-cover object-center border border-white/70 shadow-inner"
+                    loading="eager"
+                    onError={() => setPhotoError(true)}
+                  />
+                )}
               </div>
             </div>
 

@@ -55,7 +55,6 @@ export default function App() {
             <a href="#skills" className="hover:text-slate-900">Skills</a>
             <a href="#experience" className="hover:text-slate-900">Experience</a>
             <a href="#projects" className="hover:text-slate-900">Projects</a>
-            <a href="#portfolio" className="hover:text-slate-900">Gallery</a>
             <a href="#contact" className="hover:text-slate-900">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -243,28 +242,6 @@ export default function App() {
                 <li>Engagement Carousel Campaign: 94k reach, CPR ₹2.2 (5 hours duration)</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PORTFOLIO GALLERY */}
-      <section id="portfolio" className="px-6 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeading title="Portfolio Gallery" subtitle="A glimpse of social designs, web visuals, creatives, and SEO docs." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              'Social media post designs',
-              'Website/blog visuals',
-              'Ad creatives & campaign screenshots',
-              'SEO keyword sheet example',
-            ].map((label) => (
-              <div key={label} className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-white shadow-[0_12px_40px_rgba(0,0,0,0.05)]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(186,230,253,0.55),transparent_50%),_radial-gradient(circle_at_80%_20%,rgba(221,214,254,0.6),transparent_45%)]" />
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-white/80 via-white/40 to-transparent backdrop-blur">
-                  <p className="text-sm font-medium text-slate-800">{label}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
